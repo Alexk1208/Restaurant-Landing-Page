@@ -7,17 +7,30 @@ export default function pageContent(){
     })();
     
     const bodyContent = (() => {
-        let body = document.getElementById('content')
+        let mainContent = document.getElementById('content');
+        let body = document.createElement('div')
+        body.id = 'home1';
         let image = document.createElement('img')
-        let header = document.createElement('header');
+        image.id = 'img1';
+        let headerOutside = document.createElement('header');
+        headerOutside.id = 'headerOutside';
+        let header = document.createElement('div');
+        header.id = 'header1';
+        let beerIcon = document.createElement('img');
+        beerIcon.id = 'beerIcon';
         let placeInfo = document.createElement('div');
+        placeInfo.id = 'info1';
     
-        header.textContent = `Welcome to Rhalgar's Tavern`;
+        header.textContent = `Rhalgr's Tavern`;
         image.src = '/src/tavern.jpg';
+        beerIcon.src = '/src/free-beer.png';
         placeInfo.textContent = `We have an assortment of drinks and snacks to quench the thirst and
         hunger from your long journey!`;
-    
-        body.appendChild(header);
+        
+        mainContent.appendChild(body);
+        body.appendChild(headerOutside);
+        headerOutside.appendChild(beerIcon);
+        headerOutside.appendChild(header);
         body.appendChild(image);
         body.appendChild(placeInfo);
     })();

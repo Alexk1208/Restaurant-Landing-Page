@@ -1,3 +1,35 @@
 html{
-    background-color: grey;
+    background-color: rgb(100, 77, 77);
+}
+#home1{
+    background-color: rgb(65, 25, 18);
+    border-radius: 40px;
+    width: fit-content;
+    max-width: 700px;
+    height: 1000px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 200px;
+}
+
+#img1{
+    height: 300px;
+    width: 600px;
+}
+
+#headerOutside{
+    display: flex;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    width: 400px;
+    text-align: center;
+    font-size: 50px;
+    color: rgb(207, 139, 100);
+    font-style: italic;
+    font-weight: bold;
+}
+
+#beerIcon{
+    height: 65px;
 }

@@ -2,9 +2,10 @@ import pageContent from './pageLoad';
 import menuItems from './menuTab';
 import contactItems from './contacts';
 import './style.css';
-
 const navbar = (() => {
-    let content = document.getElementById('content')
+    let body = document.querySelector('body');
+    let content = document.createElement('div');
+    content.if = 'navBar';
     let navBar = document.createElement('ul');
     let homeButton = document.createElement('button');
     homeButton.textContent = 'Home';
@@ -18,22 +19,26 @@ const navbar = (() => {
     menuButton.classList.add('navContent');
     contactButton.classList.add('navContent');
 
+    body.appendChild(content);
     content.appendChild(navBar);
     navBar.appendChild(homeButton);
     navBar.appendChild(menuButton);
     navBar.appendChild(contactButton);
-    const defaultDisplay = (() => {
-        
-    })();
 
-    const menuDisplay = (() => {
 
-    })();
+    function clearElement(element){
+        document.getElementById(element).innerHTML = '';
+    };
 
-    const contactDisplay = (() => {
+    homeButton.addEventListener('click', () => {
+        clearElement('content');
+        pageContent();
+    });
 
-    })();
+    contactButton.addEventListener('click', () => {
+        clearElement('content');
+        contactItems();
+    });
 })();
 
-
-pageContent();
+window.onload = pageContent();

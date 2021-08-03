@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
     "build": "webpack"
   },
   "repository": {
@@ -16,11 +17,28 @@
     "url": "https://github.com/Alexk1208/Restaurant-Landing-Page/issues"
   },
   "homepage": "https://github.com/Alexk1208/Restaurant-Landing-Page#readme",
-  "description": "",
   "devDependencies": {
     "css-loader": "^6.2.0",
     "style-loader": "^3.2.1",
-    "webpack": "^5.47.0",
+    "webpack": "^5.48.0",
     "webpack-cli": "^4.7.2"
-  }
+  },
+  "dependencies": {
+    "cssesc": "^3.0.0",
+    "icss-utils": "^5.1.0",
+    "lru-cache": "^6.0.0",
+    "nanoid": "^3.1.23",
+    "postcss": "^8.3.6",
+    "postcss-modules-extract-imports": "^3.0.0",
+    "postcss-modules-local-by-default": "^4.0.0",
+    "postcss-modules-scope": "^3.0.0",
+    "postcss-modules-values": "^4.0.0",
+    "postcss-selector-parser": "^6.0.6",
+    "postcss-value-parser": "^4.1.0",
+    "semver": "^7.3.5",
+    "source-map-js": "^0.6.2",
+    "util-deprecate": "^1.0.2",
+    "yallist": "^4.0.0"
+  },
+  "description": ""
 }

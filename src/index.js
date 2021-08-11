@@ -5,7 +5,7 @@ import './style.css';
 const navbar = (() => {
     let body = document.querySelector('body');
     let content = document.createElement('div');
-    content.if = 'navBar';
+    content.id = 'navBar';
     let navBar = document.createElement('ul');
     let homeButton = document.createElement('button');
     homeButton.textContent = 'Home';
@@ -14,7 +14,7 @@ const navbar = (() => {
     let contactButton = document.createElement('button');
     contactButton.textContent = 'Contacts'
 
-    navBar.id = 'navbar';
+    navBar.id = 'navbarContent';
     homeButton.classList.add('navContent');
     menuButton.classList.add('navContent');
     contactButton.classList.add('navContent');
@@ -39,6 +39,10 @@ const navbar = (() => {
         clearElement('content');
         contactItems();
     });
+
+    window.onload = function(){
+        homeButton.click();
+        homeButton.focus();
+    }
 })();
 
-window.onload = pageContent();

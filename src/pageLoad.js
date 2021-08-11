@@ -22,8 +22,8 @@ export default function pageContent(){
         placeInfo.id = 'info1';
     
         header.textContent = `Rhalgr's Tavern`;
-        image.src = '/src/tavern.jpg';
-        beerIcon.src = '/src/free-beer.png';
+        image.src = 'https://t4.ftcdn.net/jpg/04/38/64/05/360_F_438640501_xxj3kod3bFbXkNtLXjXPn0rnmh35NbKB.jpg';
+        beerIcon.src = 'https://freeiconshop.com/wp-content/uploads/edd/beer-outline.png';
         placeInfo.textContent = `We have an assortment of drinks and snacks to quench the thirst and
         hunger from your long journey!`;
         

@@ -31,6 +31,7 @@ export default function pageContent(){
         body.appendChild(headerOutside);
         headerOutside.appendChild(beerIcon);
         headerOutside.appendChild(header);
+        headerOutside.appendChild(beerIcon);
         body.appendChild(image);
         body.appendChild(placeInfo);
     })();

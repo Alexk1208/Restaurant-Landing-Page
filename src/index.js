@@ -16,8 +16,11 @@ const navbar = (() => {
 
     navBar.id = 'navbarContent';
     homeButton.classList.add('navContent');
+    homeButton.id = 'homeButton';
     menuButton.classList.add('navContent');
+    menuButton.id = 'menuButton';
     contactButton.classList.add('navContent');
+    contactButton.id = 'contactButton';
 
     body.appendChild(content);
     content.appendChild(navBar);
@@ -29,6 +32,20 @@ const navbar = (() => {
     function clearElement(element){
         document.getElementById(element).innerHTML = '';
     };
+
+    const highlight = (() => {
+        let buttons = document.getElementsByClassName('navContent');
+        for(let i = 0; i < buttons.length; i++){
+            buttons[i].addEventListener('click', function(){
+                let current = document.getElementsByClassName('active');
+                if (current.length > 0) {
+                    current[0].className = current[0].className.replace(" active", "");
+                  }
+                this.className += " active";
+            });
+        };
+    })();
+
 
     homeButton.addEventListener('click', () => {
         clearElement('content');
@@ -42,7 +59,6 @@ const navbar = (() => {
 
     window.onload = function(){
         homeButton.click();
-        homeButton.focus();
     }
 })();
 
